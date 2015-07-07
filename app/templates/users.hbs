@@ -1,0 +1,13 @@
+<h2 id="title">Users</h2>
+<table>
+  <thead>
+    <tr><th>Name</th><th>Role</th><th>Email</th><th>Phone</th></tr>
+  </thead>
+  <tbody>
+{{#each user in model.users}}
+    <tr><td>{{user.name}}</td><td>{{user.role}}</td><td>{{user.email}}</td><td>{{user.phone}}</td></tr>
+{{else}}
+{{/each}}
+  </tbody>
+</table>
+{{outlet}}
