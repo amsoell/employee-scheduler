@@ -4,7 +4,7 @@
     <tr><th {{action "sort" "start_time"}}>Start Time</th><th {{action "sort" "end_time"}}>End Time</th><th {{action "sort" "manager_id"}}>Manager ID</th><th {{action "sort" "employee_id"}}>Employee ID</th><th {{action "sort" "break"}}>Break</th></tr>
   </thead>
   <tbody>
-{{#each shift in model.shifts}}
+{{#each shift in model}}
     <tr><td>{{shift.start_time}}</td><td>{{shift.end_time}}</td><td>{{shift.manager_id}}</td><td>{{shift.employee_id}}</td><td>{{shift.break}}</td></tr>
 {{else}}
 {{/each}}
