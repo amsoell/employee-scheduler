@@ -6,8 +6,12 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('users');
-  this.route('shifts');
+  this.route('users', {}, function() {
+    this.route('new');
+  });
+  this.route('shifts', {}, function() {
+    this.route('new');
+  });
 });
 
 export default Router;
