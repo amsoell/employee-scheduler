@@ -1,13 +1,12 @@
 <form {{action "submit" on="submit"}}>
   <fieldset class="box box-round">
-    <h3 id="title">New User</h3>
+    <h3 id="title">Update user: {{model.name}}</h3>
     <label class="form-label">Name</label>     {{input value=model.name  class="form-input"}}<br />
     <label class="form-label">Role</label>     {{input value=model.role class="form-input"}}<br />
     <label class="form-label">Phone</label>    {{input value=model.phone class="form-input"}}<br />
     <label class="form-label">Email</label>    {{input value=model.email class="form-input"}}<br />
-    <label class="form-label">Password</label> {{input value=model.password class="form-input"}}<br />
 
-    <input type="submit" value="Submit" class="btn btn-sm btn-primary">
+    <input type="submit" value="Save" class="btn btn-sm btn-primary">
     <button {{action 'cancel'}} class="btn btn-sm">Cancel</button>
   </fieldset>
 </form>

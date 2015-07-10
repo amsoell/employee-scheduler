@@ -1,0 +1,13 @@
+<div class="box box-round">
+  <h2 id="title">{{model.name}}</h2>
+  <label class="form-label">Start time:</label> {{model.start_time}}<br />
+  <label class="form-label">End time:</label>   {{model.end_time}}<br />
+  <label class="form-label">Employee:</label>   {{model.employee_id}}<br />
+  <label class="form-label">Manager:</label>    {{model.manager_id}}<br />
+  <label class="form-label">Break:</label>      {{model.break}}<br /><br />
+  {{#link-to 'shifts.edit' model.id class="btn btn-sm btn-primary"}}Edit{{/link-to}}
+  <button {{action 'cancel'}} class="btn btn-sm">Close</button>
+  <button {{action 'delete'}} class="btn btn-sm btn-red">Delete</button>
+</div>
+<br /><br />
+{{outlet}}

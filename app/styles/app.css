@@ -1,3 +1,7 @@
 .ember-application {
   padding: 10px 20px;
 }
+
+.btn-red {
+  color: #f67070;
+}

@@ -1,0 +1,15 @@
+<form {{action "submit" on="submit"}}>
+  <fieldset class="box box-round">
+    <h3 id="title">Update shift</h3>
+    <label class="form-label">Start time</label> {{input value=model.start_time  class="form-input"}}<br />
+    <label class="form-label">End time</label>   {{input value=model.end_time class="form-input"}}<br />
+    <label class="form-label">Employee</label>   {{input value=model.employee_id class="form-input"}}<br />
+    <label class="form-label">Manager</label>    {{input value=model.manager_id class="form-input"}}<br />
+    <label class="form-label">Break</label>      {{input value=model.break class="form-input"}}<br />
+
+    <input type="submit" value="Save" class="btn btn-sm btn-primary">
+    <button {{action 'cancel'}} class="btn btn-sm">Cancel</button>
+  </fieldset>
+</form>
+<br /><br />
+{{outlet}}

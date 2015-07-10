@@ -1,0 +1,12 @@
+<div class="box box-round">
+  <h2 id="title">{{model.name}}</h2>
+  <label class="form-label">Name:</label>     {{model.name}}<br />
+  <label class="form-label">Role:</label>     {{model.role}}<br />
+  <label class="form-label">Phone:</label>    {{model.phone}}<br />
+  <label class="form-label">Email:</label>    <a href="mailto:{{model.email}}">{{model.email}}</a><br /><br />
+  {{#link-to 'users.edit' model.id class="btn btn-sm btn-primary"}}Edit{{/link-to}}
+  <button {{action 'cancel'}} class="btn btn-sm">Close</button>
+  <button {{action 'delete'}} class="btn btn-sm btn-red">Delete</button>
+</div>
+<br /><br />
+{{outlet}}

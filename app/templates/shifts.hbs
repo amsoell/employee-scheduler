@@ -6,7 +6,7 @@
   </thead>
   <tbody>
 {{#each shift in model}}
-    <tr><td>{{shift.start_time}}</td><td>{{shift.end_time}}</td><td>{{shift.manager_id}}</td><td>{{shift.employee_id}}</td><td>{{shift.break}}</td></tr>
+    <tr><td>{{#link-to 'shifts.shift' shift.id}}{{shift.start_time}}{{/link-to}}</td><td>{{#link-to 'shifts.shift' shift.id}}{{shift.end_time}}{{/link-to}}</td><td>{{shift.manager_id}}</td><td>{{shift.employee_id}}</td><td>{{shift.break}}</td></tr>
 {{else}}
 {{/each}}
   </tbody>

@@ -6,7 +6,7 @@ export default Ember.Route.extend({
   },
   cleanUp: Ember.on('deactivate', function(){
     const shift = this.get('currentModel');
-    if(!shift.get('isSaving') && user.get('isNew')){
+    if(!shift.get('isSaving') && shift.get('isNew')){
       shift.destroyRecord();
     }
   }),
