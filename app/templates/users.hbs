@@ -6,8 +6,7 @@
   </thead>
   <tbody>
 {{#each user in model}}
-    <tr><td>{{#link-to 'users.user' user}}{{user.name}}{{/link-to}}</td><td>{{user.role}}</td><td>{{user.email}}</td><td>{{user.phone}}</td></tr>
-{{else}}
+{{user-record user=user}}
 {{/each}}
   </tbody>
 </table>
