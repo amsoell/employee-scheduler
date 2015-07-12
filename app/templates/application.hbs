@@ -1,7 +1,16 @@
-<h2 id="title">Employee Scheduling System</h2>
-<nav>
-  {{#link-to 'users'}}Users{{/link-to}}
-  {{#link-to 'shifts'}}Shifts{{/link-to}}
-</nav>
-
-{{outlet}}
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header ember-view">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Employee Scheduling System</span>
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        {{#link-to 'users' class="mdl-navigation__link"}}Users{{/link-to}}
+        {{#link-to 'shifts' class="mdl-navigation__link"}}Shifts{{/link-to}}
+      </nav>
+    </div>
+  </header>
+  <main class="mdl-layout__content">
+    <div class="page-content">{{outlet}}</div>
+  </main>
+</div>

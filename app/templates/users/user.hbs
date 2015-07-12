@@ -1,12 +1,18 @@
-<div class="box box-round">
-  <h2 id="title">{{model.name}}</h2>
-  <label class="form-label">Name:</label>     {{model.name}}<br />
-  <label class="form-label">Role:</label>     {{model.role}}<br />
-  <label class="form-label">Phone:</label>    {{model.phone}}<br />
-  <label class="form-label">Email:</label>    <a href="mailto:{{model.email}}">{{model.email}}</a><br /><br />
-  {{#link-to 'users.edit' model.id class="btn btn-sm btn-primary"}}Edit{{/link-to}}
-  <button {{action 'cancel'}} class="btn btn-sm">Close</button>
-  <button {{action 'delete'}} class="btn btn-sm btn-red">Delete</button>
+<div class="mdl-card mdl-shadow--2dp add-card-wide">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">{{model.name}}</h2>
+  </div>
+  <div class="mdl-card__supporting-text">
+    <label>Name:</label>     {{model.name}}<br />
+    <label>Role:</label>     {{model.role}}<br />
+    <label>Phone:</label>    {{model.phone}}<br />
+    <label>Email:</label>    <a href="mailto:{{model.email}}">{{model.email}}</a><br /><br />
+  </div>
+  <div class="mdl-card__actions mdl-card--border">
+    {{#link-to 'users.edit' model.id class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"}}Edit{{/link-to}}
+    <button {{action 'cancel'}} class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Close</button>
+    <button {{action 'delete'}} class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Delete</button>
+  </div>
 </div>
 <br /><br />
 {{outlet}}

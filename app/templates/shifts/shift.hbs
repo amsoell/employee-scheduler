@@ -1,13 +1,19 @@
-<div class="box box-round">
-  <h2 id="title">{{model.name}}</h2>
-  <label class="form-label">Start time:</label> {{model.start_time}}<br />
-  <label class="form-label">End time:</label>   {{model.end_time}}<br />
-  <label class="form-label">Employee:</label>   {{model.employee_id}}<br />
-  <label class="form-label">Manager:</label>    {{model.manager_id}}<br />
-  <label class="form-label">Break:</label>      {{model.break}}<br /><br />
-  {{#link-to 'shifts.edit' model.id class="btn btn-sm btn-primary"}}Edit{{/link-to}}
-  <button {{action 'cancel'}} class="btn btn-sm">Close</button>
-  <button {{action 'delete'}} class="btn btn-sm btn-red">Delete</button>
+<div class="mdl-card mdl-shadow--2dp add-card-wide">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Shift details</h2>
+  </div>
+  <div class="mdl-card__supporting-text">
+    <label>Start time:</label> {{model.start_time}}<br />
+    <label>End time:</label>   {{model.end_time}}<br />
+    <label>Employee:</label>   {{model.employee_id}}<br />
+    <label>Manager:</label>    {{model.manager_id}}<br />
+    <label>Break:</label>      {{model.break}}<br /><br />
+  </div>
+  <div class="mdl-card__actions mdl-card--border">
+    {{#link-to 'users.edit' model.id class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"}}Edit{{/link-to}}
+    <button {{action 'cancel'}} class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Close</button>
+    <button {{action 'delete'}} class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Delete</button>
+  </div>
 </div>
 <br /><br />
 {{outlet}}

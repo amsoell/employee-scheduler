@@ -1,7 +1,23 @@
-.ember-application {
-  padding: 10px 20px;
-}
+  .add-card-wide.mdl-card {
+    width: 512px;
+  }
+  .add-card-wide > .mdl-card__title {
+    color: #fff;
+    background: #e73b44;
+  }
+  .add-card-wide > .mdl-card__menu {
+    color: #fff;
+  }
 
-.btn-red {
-  color: #f67070;
-}
+  div.page-content {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  table.mdl-data-table {
+    width: 100%;
+  }
+
+  table.mdl-data-table th, table.mdl-data-table td {
+    text-align: left;
+  }
