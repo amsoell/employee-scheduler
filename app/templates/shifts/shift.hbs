@@ -5,8 +5,8 @@
   <div class="mdl-card__supporting-text">
     <label>Start time:</label> {{model.start_time}}<br />
     <label>End time:</label>   {{model.end_time}}<br />
-    <label>Employee:</label>   {{model.employee_id}}<br />
-    <label>Manager:</label>    {{model.manager_id}}<br />
+    <label>Employee:</label>   {{#link-to 'users.user' model.employee_id.id}}{{model.employee_id.name}}{{/link-to}}<br />
+    <label>Manager:</label>    {{#link-to 'users.user' model.manager_id.id}}{{model.manager_id.name}}{{/link-to}}<br />
     <label>Break:</label>      {{model.break}}<br /><br />
   </div>
   <div class="mdl-card__actions mdl-card--border">

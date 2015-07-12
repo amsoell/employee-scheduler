@@ -6,7 +6,12 @@
     <label>Name:</label>     {{model.name}}<br />
     <label>Role:</label>     {{model.role}}<br />
     <label>Phone:</label>    {{model.phone}}<br />
-    <label>Email:</label>    <a href="mailto:{{model.email}}">{{model.email}}</a><br /><br />
+    <label>Email:</label>    <a href="mailto:{{model.email}}">{{model.email}}</a><br />
+    <h3>Upcoming shifts</h3>
+    {{#each shift in model.shifts}}
+    {{#link-to 'shifts.shift' shift.id}}{{shift.start_time}}{{/link-to}}<br />
+    {{/each}}
+    <br />
   </div>
   <div class="mdl-card__actions mdl-card--border">
     {{#link-to 'users.edit' model.id class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"}}Edit{{/link-to}}
