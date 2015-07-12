@@ -1,2 +1,13 @@
+<h2>Users</h2>
 <button {{action "create"}} class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">New User</button>
 <br /><br />
+<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+  <thead>
+    <tr><th>Name</th><th>Role</th><th>Email</th><th>Phone</th></tr>
+  </thead>
+  <tbody>
+{{#each user in model}}
+{{user-record user=user}}
+{{/each}}
+  </tbody>
+</table>

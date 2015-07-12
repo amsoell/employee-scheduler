@@ -1,2 +1,14 @@
+<h2>Shifts</h2>
 <button {{action "create"}} class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">New Shift</button>
 <br /><br />
+<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+  <thead>
+    <tr><th {{action "sort" "start_time"}}>Start Time</th><th {{action "sort" "end_time"}}>End Time</th><th {{action "sort" "manager_id"}}>Manager ID</th><th {{action "sort" "employee_id"}}>Employee ID</th><th {{action "sort" "break"}}>Break</th></tr>
+  </thead>
+  <tbody>
+{{#each shift in model}}
+{{shift-record shift=shift}}
+{{else}}
+{{/each}}
+  </tbody>
+</table>
