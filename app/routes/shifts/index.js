@@ -1,8 +1,16 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model: function() {
-    return this.store.find('shift');
+  queryParams: {
+    sortBy: {
+      refreshModel: true
+    },
+    sortAscending: {
+      refreshModel: true
+    }
+  },
+  model: function(params) {
+    return this.store.find('shift', params);
   },
   actions: {
     create: function() {

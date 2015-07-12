@@ -3,7 +3,7 @@
 <br /><br />
 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
   <thead>
-    <tr><th>Name</th><th>Role</th><th>Email</th><th>Phone</th></tr>
+    <tr><th {{action "setSortBy" "name"}}>Name</th><th {{action "setSortBy" "role"}}>Role</th><th {{action "setSortBy" "email"}}>Email</th><th {{action "setSortBy" "phone"}}>Phone</th></tr>
   </thead>
   <tbody>
 {{#each user in model}}

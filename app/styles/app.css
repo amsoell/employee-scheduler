@@ -21,3 +21,11 @@
   table.mdl-data-table th, table.mdl-data-table td {
     text-align: left;
   }
+
+  table th {
+    cursor: pointer;
+  }
+
+  table th:hover {
+    text-decoration: underline;
+  }

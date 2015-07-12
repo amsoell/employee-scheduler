@@ -3,7 +3,7 @@
 <br /><br />
 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
   <thead>
-    <tr><th {{action "sort" "start_time"}}>Start Time</th><th {{action "sort" "end_time"}}>End Time</th><th {{action "sort" "manager_id"}}>Manager ID</th><th {{action "sort" "employee_id"}}>Employee ID</th><th {{action "sort" "break"}}>Break</th></tr>
+    <tr><th {{action "setSortBy" "start_time"}}>Start Time</th><th {{action "setSortBy" "end_time"}}>End Time</th><th {{action "setSortBy" "manager_id"}}>Manager ID</th><th {{action "setSortBy" "employee_id"}}>Employee ID</th><th {{action "setSortBy" "break"}}>Break</th></tr>
   </thead>
   <tbody>
 {{#each shift in model}}
